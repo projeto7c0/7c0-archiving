@@ -3,3 +3,4 @@ if __name__ == '__main__':
     import arquivar_tweets
 
     arquivar_tweets.arquivar_tweets()
+    arquivar_tweets.arquivar_tweets_election()
