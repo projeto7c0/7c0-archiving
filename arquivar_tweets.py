@@ -1,6 +1,7 @@
 import database
 import archiveis
 import time
+import traceback
 
 def arquivar_tweets():
     lista_ids = database.recupera_ids_sem_arquivo()
@@ -11,7 +12,7 @@ def arquivar_tweets():
             print(url_arquivo)
             database.adiciona_arquivo(par[0], url_arquivo)
         except Exception as E:
-            print(E)
+            traceback.print_exc()
             print("Problema no arquivador principal")
             exit()
 
@@ -24,6 +25,6 @@ def arquivar_tweets_election():
             print(url_arquivo)
             database.adiciona_arquivo_election(par[0], url_arquivo)
         except Exception as E:
-            print(E)
+            traceback.print_exc()
             print("Problema no arquivador principal")
             exit()
